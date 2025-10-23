@@ -8,8 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "vite build && firebase deploy",
-    "production":"git checkout production && git merge main && git push origin production && git checkout main"
+    "production": "git checkout production && git merge main && git push origin production && git checkout main"
   },
   "dependencies": {
     "react": "^19.1.1",

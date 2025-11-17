@@ -1,4 +1,10 @@
+import projectJSON from "@/assets/data/project.json"
+import ProjectCard from "./ProjectCard";
+import { useState } from "react";
+
 export default function Projects(){
+  const [projects] = useState(projectJSON);
+
     return(
          <section id="projects" className="py-20 sm:py-32 ">
          <div className="grid lg:grid-cols-2 gap-12 sm:gap-16">
@@ -8,7 +14,7 @@ export default function Projects(){
                <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
                 Projects I have worked on
                </p>
-             
+             {projects.map(project => <ProjectCard key={project.slug} project={project} />)}
              </div>
            </div>
          </div>

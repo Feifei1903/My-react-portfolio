@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+}
+
+.navbar{
+    margin: 10px;
+}
+.gradient-bg{
+    background: linear-gradient(145deg, #0658b0,#2b8ed1, #fff);
+    width:100vw;
+    height: 80vh;
+    position: absolute;
+}
+
+.profile{
+display: flex;
+justify-content: center;
+}
+
+img{
+    border-radius: 50%;
+    width: clamp(50px, 20px, 300px);
+    height: auto;
+  
+}
+
+h1,p{
+    display: flex;
+    justify-self: center;
+    margin: 10px;
+}

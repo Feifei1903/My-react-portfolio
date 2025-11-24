@@ -1,34 +1,11 @@
-import { Link } from "react-router";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
+import { Link } from 'react-router';
+export default function NavBar(){
 
-export default function NavBar({activeSection}) {
-  return (
-    <nav className="fixed left-8 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
-      <div className="flex flex-col gap-4">
-        {["intro", "projects", "contacts"].map((section) => (
-
-          <button
-          key={section}
-            onClick={() =>
-              document
-                .getElementById(section)
-                .scrollIntoView({ behaviour: "smooth" })
-            }
-            className={`w-2 h-8 rounded-full ${activeSection === section ? "bg-foreground" : " bg-muted-foreground/30 hover:bg-muted-foreground/60"}`}
-          >
-            <span className="text-sm ml-4">{section}</span>
-          </button>
-        ))}
-      </div>
-    </nav>
-  );
+    return(
+        <div>
+            <Link to='/'>Home</Link> |
+            <Link to='about'>About</Link> |
+            <Link to='contact'>Contact</Link>
+        </div>
+    )
 }
